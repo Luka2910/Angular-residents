@@ -1,0 +1,32 @@
+<form style="margin: 2em;" [formGroup]="formStanari"> 
+    <mat-form-field>
+        <mat-label>ID:</mat-label><br>
+        <input matInput formControlName="id">
+    </mat-form-field><br>
+    <mat-form-field>
+        <mat-label>Ime:</mat-label><br>
+        <input matInput formControlName="ime">
+    </mat-form-field><br>
+    <mat-form-field>
+        <mat-label>Prezime:</mat-label><br>
+        <input matInput formControlName="prezime">
+    </mat-form-field><br>
+    <mat-form-field>
+        <mat-label>Adresa:</mat-label><br>
+        <input matInput formControlName="adresa"> 
+    </mat-form-field><br>
+    <mat-form-field appearance="fill">
+        <mat-label>Datum</mat-label>
+        <input matInput [matDatepicker]="picker"  formControlName="datumuseljenja">
+        <mat-hint>Format: MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix  [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    <br>
+    <br>
+    <button mat-raised-button color="primary" (click)="sacuvaj()">Sacuvaj</button>
+    <button mat-raised-button color="warn" (click)="nazad()">Nazad</button>        
+      
+  
+      
+</form>
